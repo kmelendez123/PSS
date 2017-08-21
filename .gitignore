@@ -60,4 +60,8 @@ typings/
 # IntelliJ IDEA file
 .idea
 
+# ignore snapshots
+_snapshots_
+*.snap
+
 

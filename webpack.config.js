@@ -1,13 +1,13 @@
 let ExtractTextPlugin = require('extract-text-webpack-plugin');
 let HTMLWebpackPlugin = require('html-webpack-plugin');
 let HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
-    template: __dirname + '/index.html',
+    template: __dirname + '/src/index.html',
     filename: 'index.html',
     inject: 'body'
 });
 
 module.exports = {
-    entry: __dirname + '/index.js',
+    entry: __dirname + '/src/index.js',
     module: {
         loaders: [
             {
@@ -34,5 +34,11 @@ module.exports = {
     plugins: [
         HTMLWebpackPluginConfig,
         new ExtractTextPlugin("styles.css")
-    ]
+    ],
+    externals: {
+        'react/addons': true,
+        'react/lib/ExecutionEnvironment': true,
+        'react/lib/ReactContext': true,
+        'react-addons-test-utils': 'react-dom',
+    },
 };
