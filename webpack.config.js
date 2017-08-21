@@ -7,6 +7,9 @@ let HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
 });
 
 module.exports = {
+    devServer: {
+        historyApiFallback: true
+    },
     entry: __dirname + '/src/index.js',
     module: {
         loaders: [
