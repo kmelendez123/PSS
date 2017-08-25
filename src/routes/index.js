@@ -1,28 +1,15 @@
 import React from 'react';
-import HomePage from './home';
-import AboutPage from './about';
-import ContactPage from './contact';
+import { Dashboard } from '../components/index';
 
-const Routes = [
-    {
-        path: '/',
-        component: HomePage,
-        label: 'Home',
-        icon: 'home',
-        exact: true
-    },
-    {
-        path: '/about',
-        component: AboutPage,
-        label: 'About',
-        icon: 'id card'
-    },
-    {
-        path: '/contact',
-        component: ContactPage,
-        label: 'Contact',
-        icon: 'mail'
-    }
+const Routes = [{
+    component: Dashboard,
+    routes: [
+        {   path: '/',
+            exact: true,
+            component: Home
+        }
+    ]
+}
 ];
 
 export default Routes;

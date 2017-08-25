@@ -9,7 +9,8 @@ import createRavenMiddleware from 'raven-for-redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 
-const RavenDSN = "https://bcec4109419444b09651d9ec71290880@sentry.io/206161";
+
+const RavenDSN = "https://bcec4109419444b09651d9ec71290880@sentry.io/206161"; //change to your RavenDSN
 Raven.config(RavenDSN).install();
 
 const history = createHistory();
@@ -30,8 +31,8 @@ const store = createStore(
     composeEnhancers(
         applyMiddleware(
             thunk,
-            routerMiddleware(history),
             logger,
+            routerMiddleware(history),
             createRavenMiddleware(Raven)
         )
     )
@@ -42,9 +43,7 @@ export default class Store extends React.Component {
         return (
             <Provider store={store}>
                 <ConnectedRouter history={history}>
-                    <div className="router">
                         {this.props.children}
-                    </div>
                 </ConnectedRouter>
             </Provider>
         )
