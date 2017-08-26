@@ -6,25 +6,33 @@ import { Route } from 'react-router-dom';
 
 describe('Dashboard', () => {
     let props;
-    let mountedDashboard;
+    let shallowDashboard;
     const dashboard = () => {
-        if(!mountedDashboard) {
-            mountedDashboard = mount(
-                <Dashboard {...props} />
+        if(!shallowDashboard) {
+            shallowDashboard = shallow(
+                <Dashboard route={routes[0]} />
             );
         }
-        return mountedDashboard;
-    }
+        return shallowDashboard;
+    };
 
     beforeEach(() => {
         props = {
-            route: routes[0].routes
+            route: routes[0]
         };
-        mountedDashboard = undefined;
+        shallowDashboard = undefined;
     });
 
     it("always renders a div", () => {
-       const divs = dashboard().find("div");
-       expect(divs.length).toBeGreaterThan(0);
+        const divs = dashboard().find("div");
+        expect(divs.length).toBeGreaterThan(0);
     });
-})
+
+    describe("the rendered div", () => {
+        it("contains everything else that gets rendered", () => {
+            const divs = dashboard().find("div");
+            const wrappingDiv = divs.first();
+            expect(wrappingDiv.children()).toEqual(dashboard().children());
+        });
+    });
+});
