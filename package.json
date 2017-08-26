@@ -53,5 +53,5 @@
     "semantic-ui-react": "^0.71.4"
   },
   "author": "Jordan Richlen",
-  "license": "SEE LICENSE IN license.txt"
+  "license": "MIT"
 }
