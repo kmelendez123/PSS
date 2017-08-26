@@ -1,18 +1,21 @@
 import React from 'react';
-import { Dashboard } from '../components/index';
+import { Dashboard, Home } from '../components/index';
 
-const Routes = [{
+const routes = [{
     component: Dashboard,
-    routes: [
-        {   path: '/',
+    routes: [{
+        path: '/',
+        exact: true,
+        component: Home,
+        routes: [{
+            path: '/',
             exact: true,
             component: Home
-        }
-    ]
-}
-];
+        }]
+    }]
+}];
 
-export default Routes;
+export default routes;
 
 
 

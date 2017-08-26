@@ -1,8 +1,8 @@
-'use strict';
-
 import React from 'react';
 import Dashboard from './Dashboard';
-import { mount } from 'enzyme';
+import { shallow, mount } from 'enzyme';
+import routes from '../../routes';
+import { Route } from 'react-router-dom';
 
 describe('Dashboard', () => {
     let props;
@@ -17,7 +17,9 @@ describe('Dashboard', () => {
     }
 
     beforeEach(() => {
-        props = {};
+        props = {
+            route: routes[0].routes
+        };
         mountedDashboard = undefined;
     });
 
@@ -25,5 +27,4 @@ describe('Dashboard', () => {
        const divs = dashboard().find("div");
        expect(divs.length).toBeGreaterThan(0);
     });
-
 })

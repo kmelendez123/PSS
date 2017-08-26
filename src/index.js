@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Store from './store';
-import { Dashboard } from './components';
+import routes from './routes';
+import { renderRoutes } from 'react-router-config';
 
 ReactDOM.render(
     <Store>
-       <Dashboard />
+        {renderRoutes(routes)}
     </Store>,
     document.getElementById('app')
 );
