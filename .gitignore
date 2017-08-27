@@ -67,4 +67,5 @@ _snapshots_
 # ignore coveralls
 *.coveralls.yml
 
-
+# ignore raven config
+src/store/raven.config.js

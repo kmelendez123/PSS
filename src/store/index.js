@@ -8,20 +8,16 @@ import Raven from 'raven-js';
 import createRavenMiddleware from 'raven-for-redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
+import RavenDSN from './raven.config';
 
-
-const RavenDSN = "https://bcec4109419444b09651d9ec71290880@sentry.io/206161"; //change to your RavenDSN
 Raven.config(RavenDSN).install();
-
 const history = createHistory();
-
 const composeEnhancers =
     typeof window === 'object' &&
     window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
         window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
             // Specify extension’s options like name, actionsBlacklist, actionsCreators, serialize...
         }) : compose;
-
 const store = createStore(
     combineReducers(
         Object.assign(reducers, {
@@ -37,7 +33,6 @@ const store = createStore(
         )
     )
 );
-
 export default class Store extends React.Component {
     render() {
         return (
