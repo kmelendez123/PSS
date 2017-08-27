@@ -15,7 +15,7 @@ node 6+
 
 Clone repository:
 ```sh
-$ git clone https://github.com/davezuko/ReactReduxTemplate.git <my-project-name>
+$ git clone https://github.com/jrichlen/ReactReduxTemplate.git <my-project-name>
 $ cd <my-project-name> 
 ```
 
