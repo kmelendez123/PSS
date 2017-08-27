@@ -64,4 +64,7 @@ typings/
 _snapshots_
 *.snap
 
+# ignore coveralls
+*.coveralls.yml
+
 

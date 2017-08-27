@@ -1,7 +1,8 @@
 language: node_js
 node_js:
   - "6"
-after_success: 'npm run coveralls'
+script: "npm run-script coveralls"
+after_script: "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
 cache:
   directories:
     - "node_modules"

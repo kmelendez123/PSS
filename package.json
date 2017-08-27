@@ -6,12 +6,13 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server",
-    "test": "jest --coverage",
-    "test:watch": "jest --watch"
+    "test": "jest",
+    "watch": "jest --watch",
+    "coverage": "jest --coverage",
+    "coveralls": "jest --coverage && node ./node_modules/coveralls/bin/coveralls.js < ./coverage/lcov.info"
   },
   "jest": {
     "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js",
-    "collectCoverage": true,
     "verbose": true
   },
   "devDependencies": {
