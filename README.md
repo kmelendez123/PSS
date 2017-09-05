@@ -4,6 +4,7 @@ React-redux template with logging and error reporting middleware. Integrates wit
 [![npm version](https://badge.fury.io/js/react-redux-semantic.png)](https://badge.fury.io/js/react-redux-semantic)
 [![Build Status](https://travis-ci.org/Jrichlen/ReactReduxTemplate.svg?branch=master)](https://travis-ci.org/Jrichlen/ReactReduxTemplate)
 [![Coverage Status](https://coveralls.io/repos/github/Jrichlen/ReactReduxTemplate/badge.svg?branch=master)](https://coveralls.io/github/Jrichlen/ReactReduxTemplate?branch=master)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d6bb3bae7fc147a3933fd53223777cc9)](https://www.codacy.com/app/Jrichlen/ReactReduxTemplate?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Jrichlen/ReactReduxTemplate&amp;utm_campaign=Badge_Grade)
 
 This is a work in progress. Please be patient and I will try to update this as quickly as possible. File an issue if you think I missed anything.
 
